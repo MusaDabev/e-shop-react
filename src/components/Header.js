@@ -1,18 +1,16 @@
 import React from "react";
-import '../Styles/style.css'
-import logo from '../pictures/Drop.png'
-import shoppingCartLogo from '../pictures/shopping-cart-solid.svg';
-import searchLogo from '../pictures/search-solid.svg';
+import "../Styles/style.css";
+import logo from "../pictures/Drop.png";
+import shoppingCartLogo from "../pictures/shopping-cart-solid.svg";
+import searchLogo from "../pictures/search-solid.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
-    return (
-        <div className="header">
-          <div className="menu-btn">
-        <div className="menu-btn-burger"></div>
-      </div>
-      <a href="index.html">
-        <img className="logo" src={logo} alt="logo"
-      /></a>
+  return (
+    <header className="header">
+      <Link to="/">
+        <img className="logo" src={logo} alt="logo" />
+      </Link>
       <div className="wrapper">
         <div className="search-box">
           <input type="text" className="input-search" placeholder="Търсене" />
@@ -23,22 +21,28 @@ function Header() {
         </div>
       </div>
       <div className="shopping-cart">
-        <a href="cart.html">
+        <Link to="/cart">
           <p>Количка</p>
           <img
             className="shopping-cart-logo"
             src={shoppingCartLogo}
             alt="shopping cart"
           />
-        </a>
+        </Link>
       </div>
 
-      <a className="registration-link" href="registration.html">Регистрация</a>
+      <Link to="/registration" className="registration-link">
+       
+        Регистрация
+      </Link>
       <div className="login-btn">
-        <button>Вход</button>
+        <Link to="/login">
+          
+          <button>Вход</button>
+        </Link>
       </div>
-        </div>
-    )
+    </header>
+  );
 }
 
-export default Header
+export default Header;
