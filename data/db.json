@@ -1,0 +1,160 @@
+{
+"products": [
+    {
+        "id": 1,
+        "name": "Рокля",
+        "instock": 5,
+        "description": "Кафява стилна рокля",
+        "image_src": "/pictures/products/0_1356070.jpg",
+        "price": 65.00
+    },
+    {
+        "id": 2,
+        "name": "Рокля",
+        "description": "Кафява стилна рокля",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1356060.jpg",
+        "price": 60.00
+    },
+    {
+        "id": 3,
+        "name": "Риза",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1356060.jpg",
+        "price": 60.00
+    },
+    {
+        "id": 4,
+        "name": "Суичър",
+        "description": "Суичър с надпис",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1355407.jpg",
+        "price": 29.99
+    },
+    {
+        "id": 5,
+        "name": "Обувки",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1355485.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 6,
+        "name": "Обувки",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1355538_1355833.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 7,
+        "name": "Рокля",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1355584.jpg",
+        "price": 62.99
+    },
+    {
+        "id": 8,
+        "name": "Панталон",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1355600.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 9,
+        "name": "Име на продукт",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1355603.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 10,
+        "name": "Име на продукт",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1355603.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 11,
+        "name": "Име на продукт",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1355603.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 12,
+        "name": "Име на продукт",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/0_1355603.jpg",
+        "price": 25.99
+    }
+
+],
+
+"discountProducts": [
+    {
+        "id": 1.1,
+        "name": "Риза",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/CS_ClassicWhite_06_2048x2048.jpg",
+        "price": 38.00,
+        "discountPrice": 27.00
+    },
+    {
+        "id": 1.2,
+        "name": "Дънки",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/81KyIuYaH6L._UY550_.jpg",
+        "price": 65.00,
+        "discountPrice": 45.00
+    },
+    {
+        "id": 1.3,
+        "name": "Пола",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/867a31f0-1921-433a-84aa-466f16955dca.jpg",
+        "price": 65.00,
+        "discountPrice": 45.00
+    },
+    {
+        "id": 1.4,
+        "name": "Тениска",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/9088.png",
+        "price": 65.00,
+        "discountPrice": 45.00
+    },
+    {
+        "id": 1.5,
+        "name": "Яке",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/hmgoepprod.jpg",
+        "price": 65.00,
+        "discountPrice": 45.00
+    },
+    {
+        "id": 1.6,
+        "name": "Риза",
+        "description": "Описание",
+        "instock": 5,
+        "image_src": "/pictures/products/types-of-shirts-for-men-bewakoof-blog-10-1610963791.jpg",
+        "price": 65.00,
+        "discountPrice": 45.00
+    }
+]
+
+
+}
