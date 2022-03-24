@@ -5,26 +5,30 @@ import { Link } from 'react-router-dom';
 
 
 function Footer() {
+
+  const d = new Date();
+  let year = d.getFullYear();
   return (
+    <>
     <div className='footer'>
        <div className="inforamtion">
         <h3 className='footerHeadings'>ИНФОРМАЦИЯ</h3>
         <ul className="sidebar-items">
-          <li><a href="">За нас</a></li>
+          <li><Link to=''>За нас</Link></li>
           <li><Link to="/contacts">Контакти</Link></li>
-          <li><a href="">Магазини</a></li>
-          <li><a href="">Общи условия</a></li>
-          <li><a href="">Поверителност и лични данни</a></li>
-          <li><a href="">Мнения</a></li>
+          <li><Link to=''>Магазини</Link></li>
+          <li><Link to=''>Общи условия</Link></li>
+          <li><Link to=''>Поверителност и лични данни</Link></li>
+          <li><Link to=''>Мнения</Link></li>
         </ul>
       </div>
       <div className="menu">
         <h3 className='footerHeadings'>МЕНЮ</h3>
         <ul className="menu-footer">
-          <li><a href="">Нови продукти</a></li>
-          <li><a href="">Промоции</a></li>
-          <li><a href="">Категория 1</a></li>
-          <li><a href="">Категория 2</a></li>
+          <li><Link to=''>Нови продукти</Link></li>
+          <li><Link to=''>Промоции</Link></li>
+          <li><Link to=''>Категория 1</Link></li>
+          <li><Link to=''>Категория 2</Link></li>
         </ul>
       </div>
       <div className="social-networks">
@@ -39,11 +43,12 @@ function Footer() {
         <p>E-mail: example@ex.com</p>
         <p>Адрес: ул. Цар Борис 3</p>
         <p>
-          Copyright © 2021
+         Copyright © {year} 
           <img className="footer-logo" src={footerLogo} alt="" />
         </p>
       </div>
     </div>
+    </>
   )
 }
 
