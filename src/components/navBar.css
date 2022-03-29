@@ -1,0 +1,23 @@
+.side-menu {
+    width: 200px;
+    height: 100vw;
+   position: absolute;
+   top: 0;
+}
+
+.nav-items {
+    list-style-type: none;
+}
+
+.nav-item {
+   text-decoration: none;
+}
+
+.side-menu {
+    background-color: blue;
+}
+
+.close-icon, .open-icon {
+    font-size: 2rem;
+}
+
