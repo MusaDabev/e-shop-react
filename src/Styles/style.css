@@ -348,13 +348,13 @@
 
 .inforamtion {
     color: white;
-    font: normal normal 300 32px/38px Roboto;
     margin-left: 140px;
 }
 
 .inforamtion>ul>li>a {
     text-decoration: none;
     color: white;
+    font-size: 1.8rem;
 }
 
 .inforamtion>ul>li {
@@ -369,17 +369,16 @@
 
 .menu {
     color: white;
-    font: normal normal 300 32px/38px Roboto;
+   
 }
 
 .social-networks {
     color: white;
-    font: normal normal 300 32px/38px Roboto;
 }
 
 .contacts {
     color: white;
-    font: normal normal 300 32px/38px Roboto;
+    font-size: 1.8rem;
 }
 
 .menu-footer {
@@ -389,6 +388,7 @@
 .menu-footer>li>a {
     color: white;
     text-decoration: none;
+    font-size: 1.8rem;
 }
 
 .menu-footer>li {
@@ -398,6 +398,7 @@
 
 .social-networks>i {
     padding: 8px;
+    
 }
 
 .footer-logo {
