@@ -12,12 +12,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Subscribe from "./components/Subscribe";
 import Contacts from "./components/Contacts";
-import NotFound from "./components/NotFound";
+import NotFound from "./Screens/NotFound";
 import NavBar from "./components/NavBar";
 import Login from "./Screens/Login";
 import Register from "./components/Register";
 import {UserContext} from './components/UserContext'
 import Loading from './components/Loading'
+import Home from "./Screens/Home";
 
 
 
@@ -42,7 +43,7 @@ function App() {
         <UserContext.Provider value={{isLoading, setIsLoading}}>
           <Routes>
            
-             <Route exact path="/" element={ isLoading ? <Loading/> : <Product />} />
+             <Route exact path="/" element={ <Home />} />
              <Route  path="/contacts" element={<Contacts />} />
              <Route  path="/login" element={<Login />} />
              <Route  path="/registration" element={<Register />} />
