@@ -60,7 +60,7 @@ function Product() {
   const {isLoading, setIsLoading} = useContext(UserContext);
 
   useEffect (() => {
-    fetch('http://localhost:4000/products').then( res => res.json()).then((result) => {
+    fetch('http://localhost:5000/products').then( res => res.json()).then((result) => {
       setProducts(result)
       setIsLoading(false)
      

@@ -5,7 +5,7 @@
         "name": "Рокля",
         "instock": 5,
         "description": "Кафява стилна рокля",
-        "image_src": "/pictures/products/0_1356070.jpg",
+        "image_src": "https://res.cloudinary.com/musadabev/image/upload/v1648895605/Products/0_1355584_yaugsj.jpg",
         "price": 65.00
     },
     {
@@ -13,7 +13,7 @@
         "name": "Рокля",
         "description": "Кафява стилна рокля",
         "instock": 5,
-        "image_src": "/pictures/products/0_1356060.jpg",
+        "image_src": "https://res.cloudinary.com/musadabev/image/upload/v1648895605/Products/0_1356070_a8mjuk.jpg",
         "price": 60.00
     },
     {
@@ -21,7 +21,7 @@
         "name": "Риза",
         "description": "Описание",
         "instock": 5,
-        "image_src": "/pictures/products/0_1356060.jpg",
+        "image_src": "https://res.cloudinary.com/musadabev/image/upload/v1648895605/Products/0_1356065_wcyxye.jpg",
         "price": 60.00
     },
     {
@@ -47,56 +47,7 @@
         "instock": 5,
         "image_src": "/pictures/products/0_1355538_1355833.jpg",
         "price": 25.99
-    },
-    {
-        "id": 7,
-        "name": "Рокля",
-        "description": "Описание",
-        "instock": 5,
-        "image_src": "/pictures/products/0_1355584.jpg",
-        "price": 62.99
-    },
-    {
-        "id": 8,
-        "name": "Панталон",
-        "description": "Описание",
-        "instock": 5,
-        "image_src": "/pictures/products/0_1355600.jpg",
-        "price": 25.99
-    },
-    {
-        "id": 9,
-        "name": "Име на продукт",
-        "description": "Описание",
-        "instock": 5,
-        "image_src": "/pictures/products/0_1355603.jpg",
-        "price": 25.99
-    },
-    {
-        "id": 10,
-        "name": "Име на продукт",
-        "description": "Описание",
-        "instock": 5,
-        "image_src": "/pictures/products/0_1355603.jpg",
-        "price": 25.99
-    },
-    {
-        "id": 11,
-        "name": "Име на продукт",
-        "description": "Описание",
-        "instock": 5,
-        "image_src": "/pictures/products/0_1355603.jpg",
-        "price": 25.99
-    },
-    {
-        "id": 12,
-        "name": "Име на продукт",
-        "description": "Описание",
-        "instock": 5,
-        "image_src": "/pictures/products/0_1355603.jpg",
-        "price": 25.99
     }
-
 ],
 
 "discountProducts": [
