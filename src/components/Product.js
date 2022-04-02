@@ -1,37 +1,17 @@
-import React, { useState, useEffect, useContext } from "react";
-import { UserContext } from "./UserContext";
+import React, { useState, useEffect, } from "react";
+import Button from '@mui/material/Button';
 
 
 import { Link } from "react-router-dom";
 
 import "../Styles/style.css";
 
-import photo from "../pictures/products/0_1356060.jpg";
-import heart from "../icons/Heart-SG2001-transparent.png";
-import secHeart from "../icons/video_image-Bz5ouo4Jn.jpg";
+
 
 
 function Render(props) {
   const { id, image_src, name, description, price } = props;
 
-  const [heart, setHeart] = useState(
-    "https://upload.wikimedia.org/wikipedia/commons/1/1e/Heart-SG2001-transparent.png"
-  );
-
-  const [isClicked, setIsClicked] = useState(false);
-
-  function clicked () {
-    setIsClicked(!isClicked)
-  if (isClicked) {
-    setHeart('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Love_Heart_symbol.svg/1200px-Love_Heart_symbol.svg.png')
-  } else {
-    setHeart('https://upload.wikimedia.org/wikipedia/commons/1/1e/Heart-SG2001-transparent.png')
-  }
- 
-
-  }
-
-  
 
   return (
     <div>
@@ -43,10 +23,8 @@ function Render(props) {
         <p className="product-discription">{description}</p>
         <div className="product-prices-and-discount">
           <strong className="shop-item-price">{price}</strong>
-          <button onClick={clicked} className="fav" id="like-button">
-            <img className="red-heart-img" src={heart} alt="" />
-          </button>
         </div>
+        <Button LinkComponent={Link} to={`/products/${id}`} variant="contained">More Details</Button>
       </div>
     </div>
   );
@@ -56,19 +34,17 @@ function Product() {
 
   const [products, setProducts] = useState([]);
   
-
-  const {isLoading, setIsLoading} = useContext(UserContext);
-
   useEffect (() => {
     fetch('http://localhost:5000/products').then( res => res.json()).then((result) => {
       setProducts(result)
-      setIsLoading(false)
-     
     })
   }, []) 
 
   return (
+    <>
+    <h2 className="most-selled-heading" >Най - продавани</h2>
     <div className="most-selled-container">
+     
       {products.map((product) => {
 
         //  <Render {...products[0]}
@@ -79,6 +55,7 @@ function Product() {
         })}
 
     </div>
+    </>
   );
 }
 

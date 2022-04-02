@@ -1,13 +1,11 @@
 import {
-  BrowserRouter,
-  BrowserRouter as Router,
   Route,
   Routes,
 } from "react-router-dom";
 
 import { useState, useEffect } from "react";
+import React from "react";
 
-import Product from "./components/Product";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Subscribe from "./components/Subscribe";
@@ -15,10 +13,10 @@ import Contacts from "./components/Contacts";
 import NotFound from "./Screens/NotFound";
 import NavBar from "./components/NavBar";
 import Login from "./Screens/Login";
-import Register from "./components/Register";
+import Register from "./Screens/Register";
 import {UserContext} from './components/UserContext'
-import Loading from './components/Loading'
 import Home from "./Screens/Home";
+import ProductDetails from "./Screens/ProductDetails";
 
 
 
@@ -35,7 +33,6 @@ function App() {
   
 
   return (
-    <BrowserRouter>
       <div className="App">
        <Header />
       <NavBar></NavBar>
@@ -47,6 +44,7 @@ function App() {
              <Route  path="/contacts" element={<Contacts />} />
              <Route  path="/login" element={<Login />} />
              <Route  path="/registration" element={<Register />} />
+             <Route  path="/products/:id" element={<ProductDetails />} />
              <Route path="*" element={<NotFound />}></Route>
          
           </Routes>
@@ -55,7 +53,6 @@ function App() {
         <Subscribe />
         <Footer />
       </div>
-    </BrowserRouter>
   );
 }
 

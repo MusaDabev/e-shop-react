@@ -1,0 +1,7 @@
+.first-section {
+   display: grid;
+   grid-template-columns: 0.6fr 1.4fr; 
+   margin-left: 50px;
+   margin-right: 50px;
+   background-color: white;
+}
