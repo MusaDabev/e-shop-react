@@ -14,7 +14,7 @@ import Subscribe from "./components/Subscribe";
 import Contacts from "./components/Contacts";
 import NotFound from "./components/NotFound";
 import NavBar from "./components/NavBar";
-import Login from "./components/Login";
+import Login from "./Screens/Login";
 import Register from "./components/Register";
 import {UserContext} from './components/UserContext'
 import Loading from './components/Loading'
