@@ -29,7 +29,7 @@
         "name": "Суичър",
         "description": "Суичър с надпис",
         "instock": 5,
-        "image_src": "/pictures/products/0_1355407.jpg",
+        "image_src": "https://res.cloudinary.com/musadabev/image/upload/v1648895604/Products/0_1355407_htlcdh.jpg",
         "price": 29.99
     },
     {
@@ -37,7 +37,7 @@
         "name": "Обувки",
         "description": "Описание",
         "instock": 5,
-        "image_src": "/pictures/products/0_1355485.jpg",
+        "image_src": "https://res.cloudinary.com/musadabev/image/upload/v1648895604/Products/0_1355538_1355833_wzov4e.jpg",
         "price": 25.99
     },
     {
@@ -45,7 +45,7 @@
         "name": "Обувки",
         "description": "Описание",
         "instock": 5,
-        "image_src": "/pictures/products/0_1355538_1355833.jpg",
+        "image_src": "https://res.cloudinary.com/musadabev/image/upload/v1648895604/Products/0_1355485_dn8cfs.jpg",
         "price": 25.99
     }
 ],

@@ -1,0 +1,9 @@
+.headingAndMessage {
+    display: flex;
+    align-items: center;
+}
+
+.message-icon {
+    font-size: 3rem;
+    cursor: pointer;
+}
