@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/style.css';
 import subsLogo from '../pictures/Drop_White.png';
-import '../fontawsome_css/all.min.css';
+import {AiOutlineMail} from 'react-icons/ai'
 
 function Subscribe() {
   return (
@@ -21,7 +21,7 @@ function Subscribe() {
           value="http://127.0.0.1:5501/Pages/thankYouForSub.html"
         />
         <input type="hidden" name="_captcha" value="false"/>
-        <button className="subs-btn"><i className="far fa-envelope"></i></button>
+        <button className="subs-btn"><AiOutlineMail style={{fontSize: "2rem"}}/></button>
       </form>
     </div>
   )
