@@ -21,8 +21,18 @@ function App() {
     const [products, setProducts] = useState([]);
 
     const fetchProducts =  async() => {
-      
+      const {data} = await commerce.products.list();
+
+      setProducts(data);
     }
+
+    useEffect(() => {
+
+      fetchProducts();
+
+    }, [])
+
+    console.log(products);
 
   return (
     <div className="App">
@@ -30,7 +40,7 @@ function App() {
       <NavBar></NavBar>
       <div className="content">
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home products={products} />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Register />} />
