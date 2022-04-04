@@ -5,14 +5,14 @@ import Product from "../components/Products";
 import { SliderData } from "../components/SliderData";
 import "./home.css";
 
-function Home({products}) {
+function Home({products, onAddToCart}) {
   return (
     <>
       <section className="first-section">
         <Categories />
         <ImageSlider slides={SliderData} />
       </section>
-      <Product products={products} />
+      <Product products={products} onAddToCart={onAddToCart} />
     </>
   );
 }

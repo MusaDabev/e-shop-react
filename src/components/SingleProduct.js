@@ -1,8 +1,9 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import {MdOutlineAddShoppingCart} from 'react-icons/md'
 
-function SingleProduct({product}) {
+function SingleProduct({product, onAddToCart}) {
   return (
     <>
       <div className="most-selled-item">
@@ -17,6 +18,7 @@ function SingleProduct({product}) {
         <Button LinkComponent={Link} to={`/products/`} variant="contained">
           More Details
         </Button>
+        <MdOutlineAddShoppingCart onClick={ () => onAddToCart(product.id, 1)}  style={{fontSize: '2rem', cursor: 'pointer'}} />
       </div>
     </>
   );

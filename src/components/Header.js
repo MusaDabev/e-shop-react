@@ -1,11 +1,12 @@
 import React from "react";
 import "../Styles/style.css";
 import logo from "../pictures/Drop.png";
-import shoppingCartLogo from "../pictures/shopping-cart-solid.svg";
 import searchLogo from "../pictures/search-solid.svg";
 import { Link } from "react-router-dom";
+import Badge from '@mui/material/Badge';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-function Header() {
+function Header({totalItems}) {
   return (
     <header className="header">
       <Link to="/">
@@ -20,16 +21,10 @@ function Header() {
           </button>
         </div>
       </div>
-      <div className="shopping-cart">
-        <Link to="/cart">
-          <p>Количка</p>
-          <img
-            className="shopping-cart-logo"
-            src={shoppingCartLogo}
-            alt="shopping cart"
-          />
-        </Link>
-      </div>
+      <Badge badgeContent={totalItems} color="primary">
+      <ShoppingCartIcon/>
+      </Badge>
+      
 
       <Link to="/registration" className="registration-link">
        
