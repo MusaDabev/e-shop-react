@@ -1,7 +1,4 @@
-import {
-  Route,
-  Routes,
-} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 import React from "react";
@@ -14,45 +11,36 @@ import NotFound from "./Screens/NotFound";
 import NavBar from "./components/NavBar";
 import Login from "./Screens/Login";
 import Register from "./Screens/Register";
-import {UserContext} from './components/UserContext'
+import { UserContext } from "./components/UserContext";
 import Home from "./Screens/Home";
 import ProductDetails from "./Screens/ProductDetails";
-
-
+import { commerce } from "./lib/commerce";
 
 function App() {
 
+    const [products, setProducts] = useState([]);
 
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-  }, 5000)
-  })
-  
+    const fetchProducts =  async() => {
+      
+    }
 
   return (
-      <div className="App">
-       <Header />
+    <div className="App">
+      <Header />
       <NavBar></NavBar>
-        <div className="content">
-        <UserContext.Provider value={{isLoading, setIsLoading}}>
-          <Routes>
-           
-             <Route exact path="/" element={ <Home />} />
-             <Route  path="/contacts" element={<Contacts />} />
-             <Route  path="/login" element={<Login />} />
-             <Route  path="/registration" element={<Register />} />
-             <Route  path="/products/:id" element={<ProductDetails />} />
-             <Route path="*" element={<NotFound />}></Route>
-         
-          </Routes>
-          </UserContext.Provider>
-        </div>
-        <Subscribe />
-        <Footer />
+      <div className="content">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registration" element={<Register />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
       </div>
+      <Subscribe />
+      <Footer />
+    </div>
   );
 }
 
