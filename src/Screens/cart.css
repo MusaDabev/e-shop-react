@@ -1,8 +1,20 @@
+.cart-container {
+    margin-left: 140px;
+    margin-right: 140px;
+ 
+}
+
 .cart-item-container {
     display: flex;
     flex-direction: row;
     gap: 20px;
     background-color: #F1F1F1;
     width: 100%;
+    justify-content: center;
    
+}
+
+.subtotal-andButtons {
+    width: 100%;
+    text-align: center;
 }

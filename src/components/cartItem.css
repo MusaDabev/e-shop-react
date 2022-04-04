@@ -1,5 +1,5 @@
 .cart-item-img {
-    max-width: 300px;
+    width: 200px;
     max-height: 200px;
     border-radius: 5px;
     
@@ -10,12 +10,18 @@
 .cart-item-content {
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 
 .cartActions {
     display: flex;
     align-items: center;
     justify-items: center;
+    justify-content: center;
+}
+
+.remove-button {
+   width: 100%;
 }
 
 

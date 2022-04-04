@@ -3,7 +3,7 @@ import React from 'react'
 import './cartItem.css'
 
 
-function CartItem({item}) {
+function CartItem({item, handleRemoveFromCart, handleCartQty}) {
   return (
     <div>
       <img className="cart-item-img" src={item.image.url} />
@@ -12,11 +12,11 @@ function CartItem({item}) {
           <h5>{item.line_total.formatted_with_symbol}</h5>
       </div>
       <div className="cartActions">
-          <Button>+</Button>
+          <Button onClick={() => handleCartQty(item.id, item.quantity + 1) }>+</Button>
           <h5>{item.quantity}</h5>
-          <Button>-</Button>
+          <Button onClick={() => handleCartQty(item.id, item.quantity - 1) }>-</Button>
       </div>
-      <Button>Премахни</Button>
+      <Button className='remove-button' onClick={() => handleRemoveFromCart(item.id)}>Премахни</Button>
     </div>
 
   )

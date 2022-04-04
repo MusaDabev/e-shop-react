@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 import './cart.css'
 
-function Cart({ cart }) {
+function Cart({ cart, handleCartQty, handleRemoveFromCart, handleEmptyCart }) {
   
 
   const FilledCart = () => (
@@ -13,14 +13,17 @@ function Cart({ cart }) {
       { cart.line_items.map((item) => (
         
         <div key={item.id}>
-         <CartItem item={item} />
+         <CartItem item={item} handleCartQty={handleCartQty} handleRemoveFromCart={handleRemoveFromCart}  />
         </div>
         
       ))}
       </div>
+      <div className="subtotal-andButtons">
       <p>Общо: {cart.subtotal.formatted_with_symbol} </p>
-      <Button>Изпразни количката</Button>
+      <Button onClick={handleEmptyCart}>Изпразни количката</Button>
       <Button>Напред към плащане</Button>
+      </div>
+      
     
     </>
   );
@@ -38,10 +41,10 @@ function Cart({ cart }) {
   }
 
   return (
-  <>
+  <div className="cart-container">
   <h1>Вашата количка</h1>
   {cart.line_items.length ? <FilledCart /> : <EmptyCart/>  }
-  </>);
+  </div>);
 }
 
 export default Cart;

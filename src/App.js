@@ -37,6 +37,27 @@ function App() {
 
     setCart(item.cart)
 
+
+  }
+
+  const handleCartQty = async (productId, quantity) => {
+
+    const response = await commerce.cart.update(productId, {quantity})
+
+    setCart(response.cart)
+
+  }
+
+  const handleRemoveFromCart = async (productId) => {
+    const response = await commerce.cart.remove(productId);
+
+    setCart(response);
+  }
+
+  const handleEmptyCart = async () => {
+    const response = await commerce.cart.empty();
+
+    setCart(response)
   }
 
   useEffect(() => {
@@ -56,9 +77,15 @@ function App() {
           <Route exact path="/" element={<Home products={products} onAddToCart={handleAddToCart} />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/cart" element={<Cart cart={cart} />} exact />
+          <Route path="/cart" element={<Cart
+           cart={cart}
+           handleCartQty = {handleCartQty}
+           handleRemoveFromCart = {handleRemoveFromCart}
+           handleEmptyCart = {handleEmptyCart}
+
+           />} exact />
           <Route path="/registration" element={<Register />} />
-          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/products/:id" element={<ProductDetails product={products} />} />
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>
