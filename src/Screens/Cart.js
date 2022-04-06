@@ -21,7 +21,7 @@ function Cart({ cart, handleCartQty, handleRemoveFromCart, handleEmptyCart }) {
       <div className="subtotal-andButtons">
       <p>Общо: {cart.subtotal.formatted_with_symbol} </p>
       <Button onClick={handleEmptyCart}>Изпразни количката</Button>
-      <Button>Напред към плащане</Button>
+      <Button LinkComponent={Link} to="/checkout">Напред към плащане</Button>
       </div>
       
     

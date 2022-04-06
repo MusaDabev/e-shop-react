@@ -15,10 +15,15 @@ import Home from "./Screens/Home";
 import ProductDetails from "./Screens/ProductDetails";
 import { commerce } from "./lib/commerce";
 import Cart from "./Screens/Cart";
+import Checkout from "./Screens/Checkout";
+
+
 
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
+
+
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -61,8 +66,10 @@ function App() {
   }
 
   useEffect(() => {
+   
     fetchProducts();
     fetchCart();
+    
   }, []);
 
   console.log(products);
@@ -86,6 +93,7 @@ function App() {
            />} exact />
           <Route path="/registration" element={<Register />} />
           <Route path="/products/:id" element={<ProductDetails product={products} />} />
+          <Route exact path="/checkout" element={<Checkout />} />
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>
