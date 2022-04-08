@@ -1,8 +1,8 @@
-.login-heading {
+.registration-heading {
     text-align: center;
 }
 
-.login-form {
+.register-form {
     display: flex;
     flex-direction: column;
     width: auto;
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.login-form > input {
+.register-form > input {
     width: 200px;
     height: 2rem;
     margin: 0px auto 0px auto;

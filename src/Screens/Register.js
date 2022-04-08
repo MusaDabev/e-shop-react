@@ -1,33 +1,25 @@
-import React from 'react'
+import React from "react";
+import './register.css'
+import {Button} from '@mui/material'
+import { textAlign } from "@mui/system";
 
 function Register() {
   return (
-    <div className='register'> 
-      <form action="#">
-          <div>
-          <label htmlFor="fname">Име</label>
-          <input type="text" />
-          </div>
+    <>
+      <h2 className="registration-heading">Регистрация</h2>
+      <form action="#" className="register-form">
+        <input type="text" name="fname" placeholder="Име" />
 
-          <div>
-          <label htmlFor="lname">Име</label>
-          <input type="text" />
-          </div>
+        <input type="text" name="lname" placeholder="Фамилия" />
 
-          <div>
-          <label htmlFor="userName">Име</label>
-          <input type="username" />
-          </div>
+        <input type="email" name="email" placeholder="Email" />
 
-          <div>
-          <label htmlFor="password">Име</label>
-          <input type="password" />
-          </div>
-          
+        <input type="password" name="password" placeholder="Парола" />
 
+        <Button type="submit" variant="contained" style={{width: '150px', textAlign: 'center', backgroundColor: '#252525'}}>Регистрация</Button> 
       </form>
-    </div>
-  )
+    </>
+  );
 }
 
-export default Register
+export default Register;

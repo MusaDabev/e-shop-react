@@ -13,11 +13,8 @@ const Checkout = ({cart, onCaptureCheckout, order, error }) => {
     const [checkoutToken, setCheckoutToken] = useState(null);
     const steps = ['Shipping adress', 'Payment details'];
     const [shippingData, setShippingdata] = useState({});
+  
     
-    
-
-    
-
     useEffect(() => {
       const generateToken = async () => {
         try {

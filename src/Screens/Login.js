@@ -1,17 +1,23 @@
-
 import React from 'react'
+import {Button} from '@mui/material'
+import './login.css'
 
 
  function Login() {
 
  
   return (
-    <div className='login-form'>
-      <form action="#">
-          <label htmlFor="userName">Потребителско име</label>
-          <input type="username" placeholder='your username' />
-      </form>
-    </div>
+    <>  
+    <h2 className="login-heading">Вход</h2>
+    <form action="#" className="login-form">
+    
+      <input type="email" name="email" placeholder="Email" />
+
+      <input type="password" name="password" placeholder="Парола" />
+
+      <Button type="submit" variant="contained" style={{width: '150px', textAlign: 'center', backgroundColor: '#252525'}}>Вход</Button> 
+    </form>
+    </>
   )
 }
 

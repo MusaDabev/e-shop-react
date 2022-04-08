@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import React from "react";
 
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 import Subscribe from "./components/Subscribe";
 import Contacts from "./components/Contacts";
@@ -96,7 +96,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header totalItems={cart.total_items} />
+      <Header totalItems={cart.total_items} products={products}  />
       <NavBar></NavBar>
       <div className="content">
         <Routes>
