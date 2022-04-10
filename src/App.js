@@ -16,15 +16,16 @@ import ProductDetails from "./Screens/ProductDetails";
 import { commerce } from "./lib/commerce";
 import Cart from "./Screens/Cart";
 import Checkout from "./Screens/Checkout";
-
+import SearchResults from "./components/SearchResults";
+import { Context } from "./components/Context";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
-
+  const [filteredData, setFilteredData] = useState([]);
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -36,35 +37,31 @@ function App() {
     const cart = await commerce.cart.retrieve();
 
     setCart(cart);
-  }
+  };
 
   const handleAddToCart = async (productId, quantity) => {
     const item = await commerce.cart.add(productId, quantity);
 
-    setCart(item.cart)
-
-
-  }
+    setCart(item.cart);
+  };
 
   const handleCartQty = async (productId, quantity) => {
+    const response = await commerce.cart.update(productId, { quantity });
 
-    const response = await commerce.cart.update(productId, {quantity})
-
-    setCart(response.cart)
-
-  }
+    setCart(response.cart);
+  };
 
   const handleRemoveFromCart = async (productId) => {
     const response = await commerce.cart.remove(productId);
 
     setCart(response);
-  }
+  };
 
   const handleEmptyCart = async () => {
     const response = await commerce.cart.empty();
 
-    setCart(response)
-  }
+    setCart(response);
+  };
   const refreshCart = async () => {
     const newCart = await commerce.cart.refresh();
 
@@ -73,7 +70,10 @@ function App() {
 
   const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
     try {
-      const incomingOrder = await commerce.checkout.capture(checkoutTokenId, newOrder);
+      const incomingOrder = await commerce.checkout.capture(
+        checkoutTokenId,
+        newOrder
+      );
 
       setOrder(incomingOrder);
 
@@ -84,10 +84,8 @@ function App() {
   };
 
   useEffect(() => {
-   
     fetchProducts();
     fetchCart();
-    
   }, []);
 
   console.log(products);
@@ -95,28 +93,63 @@ function App() {
 
   return (
     <div className="App">
-      <Header totalItems={cart.total_items} products={products}  />
+       <Context.Provider value={{ filteredData, setFilteredData }}>
+      <Header totalItems={cart.total_items} products={products} />
       <NavBar></NavBar>
       <div className="content">
+     
         <Routes>
-          <Route exact path="/" element={<Home products={products} onAddToCart={handleAddToCart} />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/cart" element={<Cart
-           cart={cart}
-           handleCartQty = {handleCartQty}
-           handleRemoveFromCart = {handleRemoveFromCart}
-           handleEmptyCart = {handleEmptyCart}
-
-           />} exact />
-          <Route path="/registration" element={<Register />} />
-          <Route path="/products/:id" element={<ProductDetails product={products} />} />
-          <Route exact path="/checkout" element={<Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />} />
-          <Route path="*" element={<NotFound />}></Route>
+          
+            <Route
+              exact
+              path="/"
+              element={
+                <Home products={products} onAddToCart={handleAddToCart} />
+              }
+            />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/cart"
+              element={
+                <Cart
+                  cart={cart}
+                  handleCartQty={handleCartQty}
+                  handleRemoveFromCart={handleRemoveFromCart}
+                  handleEmptyCart={handleEmptyCart}
+                />
+              }
+              exact
+            />
+            <Route path="/registration" element={<Register />} />
+            <Route
+              path="/products/:id"
+              element={<ProductDetails product={products} />}
+            />
+            <Route
+              exact
+              path="/checkout"
+              element={
+                <Checkout
+                  cart={cart}
+                  order={order}
+                  onCaptureCheckout={handleCaptureCheckout}
+                  error={errorMessage}
+                />
+              }
+            />
+            <Route
+              path="/search-results"
+              element={<SearchResults onAddToCart={handleAddToCart} />}
+            />
+            <Route path="*" element={<NotFound />}></Route>
+        
         </Routes>
+      
       </div>
       <Subscribe />
       <Footer />
+      </Context.Provider>
     </div>
   );
 }
