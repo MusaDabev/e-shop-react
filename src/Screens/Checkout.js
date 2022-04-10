@@ -11,7 +11,7 @@ import { commerce } from '../lib/commerce';
 const Checkout = ({cart, onCaptureCheckout, order, error }) => {
     const [activeStep, setActiveStep] = useState(0);
     const [checkoutToken, setCheckoutToken] = useState(null);
-    const steps = ['Shipping adress', 'Payment details'];
+    const steps = ['Адрес за доставка', 'Данни за плащане'];
     const [shippingData, setShippingdata] = useState({});
   
     

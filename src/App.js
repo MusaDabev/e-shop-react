@@ -18,7 +18,6 @@ import Cart from "./Screens/Cart";
 import Checkout from "./Screens/Checkout";
 
 
-
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});

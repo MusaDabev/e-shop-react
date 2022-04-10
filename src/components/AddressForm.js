@@ -68,19 +68,19 @@ function AddressForm({checkoutToken, next}) {
   return (
     <div className="adress-form">
       <Typography variant="h6" gutterBottom>
-        Shipping address
+        Адрес за доставка
       </Typography>
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit((data) => next({...data, shippingCountry, shippingOption, shippingSubdivision}) )}>
           <Grid container spacing={3}>
-            <FormInput name="firstName" label="First name" />
-            <FormInput name="lastName" label="Last name" />
-            <FormInput name="adress1" label="Adress" />
+            <FormInput name="firstName" label="Име" />
+            <FormInput name="lastName" label="Фамилия" />
+            <FormInput name="adress1" label="Адрес" />
             <FormInput  name="email" label="Email" />
-            <FormInput  name="city" label="City" />
-            <FormInput  name="zip" label="ZIP / Postal code" />
+            <FormInput  name="city" label="Град" />
+            <FormInput  name="zip" label="Пощенски код" />
             <Grid item xs={12} sm={6}>
-              <InputLabel>Shipping country</InputLabel>
+              <InputLabel>Страна за доставка</InputLabel>
               <Select value={shippingCountry} fullWidth onChange={(e) => setShippingCountry(e.target.value)}>
                 {countries.map((country) => (
                   <MenuItem key={country.id} value={country.id}>
@@ -91,7 +91,7 @@ function AddressForm({checkoutToken, next}) {
               </Select>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel>Shipping subdivision</InputLabel>
+              <InputLabel>Област</InputLabel>
               <Select value={shippingSubdivision} fullWidth onChange={(e) => setShippingSubdivision(e.target.value)}>
                 {subdivisions.map((subdivision) => (
                   <MenuItem key={subdivision.id} value={subdivision.id}>
@@ -102,7 +102,7 @@ function AddressForm({checkoutToken, next}) {
               </Select>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel>Shipping options</InputLabel>
+              <InputLabel>Опции за доставка</InputLabel>
               <Select value={shippingOption} fullWidth onChange={(e) => setShippingOption(e.target.value)}>
               {options.map((option) => (
                   <MenuItem key={option.id} value={option.id}>
@@ -114,8 +114,8 @@ function AddressForm({checkoutToken, next}) {
           </Grid>
           <br />
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Button component={Link} variant="outlined" to="/cart">Back to Cart</Button>
-            <Button type="submit" variant="contained" color="primary">Next</Button>
+            <Button component={Link} variant="outlined" to="/cart">Назад към количка</Button>
+            <Button type="submit" variant="contained" color="primary">Напред</Button>
           </div>
         </form>
       </FormProvider>
