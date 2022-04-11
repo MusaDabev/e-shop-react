@@ -24,6 +24,7 @@ function App() {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
+  const [sidebar, setSidebar] = useState(false)
 
   const [filteredData, setFilteredData] = useState([]);
 
@@ -93,9 +94,9 @@ function App() {
 
   return (
     <div className="App">
-       <Context.Provider value={{ filteredData, setFilteredData }}>
+       <Context.Provider value={{ filteredData, setFilteredData, sidebar, setSidebar }}>
       <Header totalItems={cart.total_items} products={products} />
-      <NavBar></NavBar>
+      
       <div className="content">
      
         <Routes>

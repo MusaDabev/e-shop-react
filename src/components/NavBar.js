@@ -1,12 +1,13 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import { Link } from "react-router-dom";
 import "./navBar.css";
 import * as AiIcons  from "react-icons/ai"
+import { Context } from "./Context";
 
 
  function NavBar() {
 
-  const [sidebar, setSidebar] = useState(false)
+  const { sidebar, setSidebar } = useContext(Context);
 
   function showSideBar () {
       setSidebar(!sidebar)

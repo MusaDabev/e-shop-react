@@ -6,12 +6,14 @@ import { Link, useLocation } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchBar from "./SearchBar";
+import NavBar from "../NavBar";
 
 function Header({ totalItems, products }) {
   const location = useLocation();
 
   return (
     <header className="header">
+      <NavBar />
       <Link to="/">
         <img className="logo" src={logo} alt="logo" />
       </Link>
