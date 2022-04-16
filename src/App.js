@@ -25,6 +25,8 @@ function App() {
   const [errorMessage, setErrorMessage] = useState("");
   const [sidebar, setSidebar] = useState(false)
 
+  const [favourites, setFavourites] = useState([]);
+
   const [filteredData, setFilteredData] = useState([]);
 
   const fetchProducts = async () => {
