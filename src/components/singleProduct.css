@@ -1,4 +1,8 @@
-.details-addToCart {
+.most-selled-item {
+    background-color: white;
+}
+
+.product-prices-and-add-to-cart {
     display: flex;
     justify-items: center;
     align-items: center;
@@ -9,4 +13,14 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.shop-item-title, .product-discription  {
+    padding-left: 10px;
+}
+
+.shop-item-price {
+color: #7B21F1;
+font-size: 1.3rem; 
+
 }

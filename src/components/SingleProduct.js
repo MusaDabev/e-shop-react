@@ -16,18 +16,16 @@ function SingleProduct({ product, onAddToCart }) {
           dangerouslySetInnerHTML={{ __html: product.description }}
           className="product-discription"
         ></p>
-        <div className="product-prices-and-discount">
+        <div className="product-prices-and-add-to-cart">
           <strong className="shop-item-price">{product.price.formatted}</strong>
-        </div>
-        <div className="details-addToCart">
-          <Button LinkComponent={Link} to={`/products/`} variant="contained">
-            Повече детайли
-          </Button>
           <MdOutlineAddShoppingCart
             onClick={() => onAddToCart(product.id, 1)}
             style={{ fontSize: "2rem", cursor: "pointer" }}
           />
         </div>
+        
+         
+       
       </div>
     </>
   );

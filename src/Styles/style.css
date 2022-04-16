@@ -1,5 +1,6 @@
 body {
-    background-color: #00000029;
+    background-color: #F1F1F1;
+    margin: 0;
 }
 
 
@@ -88,8 +89,6 @@ body {
     width: 185px;
     height: 29px;
     text-align: left;
-    font: normal normal bold 24px/29px Roboto;
-    letter-spacing: 0.48px;
     color: #252525;
 }
 

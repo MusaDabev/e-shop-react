@@ -11,15 +11,31 @@ function Categories() {
 
       <div className="categorie">
         <FaRandom className="categ-icon"></FaRandom>
-        <Link to={'#'} className="cat-link">КАТЕГОРИЯ 1</Link>
+        <Link to={'#'} className="cat-link">Опция 1</Link>
       </div>
       <div className="categorie">
         <FaRandom className="categ-icon"></FaRandom>
-        <Link to={'#'} className="cat-link">КАТЕГОРИЯ 2</Link>
+        <Link to={'#'} className="cat-link">Опция 2</Link>
       </div>
       <div className="categorie">
         <FaRandom className="categ-icon"></FaRandom>
-        <Link to={'#'} className="cat-link">КАТЕГОРИЯ 3</Link>
+        <Link to={'#'} className="cat-link">Опция 3</Link>
+      </div>
+      <div className="categorie">
+        <FaRandom className="categ-icon"></FaRandom>
+        <Link to={'#'} className="cat-link">Опция 4</Link>
+      </div>
+      <div className="categorie">
+        <FaRandom className="categ-icon"></FaRandom>
+        <Link to={'#'} className="cat-link">Опция 5</Link>
+      </div>
+      <div className="categorie">
+        <FaRandom className="categ-icon"></FaRandom>
+        <Link to={'#'} className="cat-link">Опция 6</Link>
+      </div>
+      <div className="categorie">
+        <FaRandom className="categ-icon"></FaRandom>
+        <Link to={'#'} className="cat-link">Опция 7</Link>
       </div>
     </div>
   );
