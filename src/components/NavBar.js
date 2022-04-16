@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext,} from "react";
 import { Link } from "react-router-dom";
 import "./navBar.css";
 import * as AiIcons  from "react-icons/ai"
@@ -48,7 +48,7 @@ import { Context } from "./Context";
     </Link>
     </div>
     
-    <div> { sidebar ? <RenderSideNav/>: null}</div>
+    <> { sidebar ? <RenderSideNav/>: null}</>
     </>
   );
 }

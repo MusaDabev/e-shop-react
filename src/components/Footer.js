@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
 import '../Styles/style.css';
 import footerLogo from '../pictures/Drop_White.png';
 import { Link } from 'react-router-dom';
+import {BsFacebook, BsInstagram, BsTwitter} from 'react-icons/bs';
+import './footer.css';
+
 
 
 function Footer() {
@@ -33,9 +36,11 @@ function Footer() {
       </div>
       <div className="social-networks">
         <h3 className='footerHeadings'>СОЦИАЛНИ МРЕЖИ</h3>
-        <i className="fab fa-facebook"></i>
-        <i className="fab fa-twitter-square"></i>
-        <i className="fab fa-instagram"></i>
+        <div className='icons'>
+          <BsFacebook style={{color: "white", cursor: "pointer"}} />
+          <BsInstagram style={{color: "white", cursor: "pointer"}} />
+          <BsTwitter style={{color: "white", cursor: "pointer"}} />
+        </div>
       </div>
       <div className="contacts">
         <h3 className='footerHeadings'>КОНТАКТИ</h3>
@@ -44,7 +49,7 @@ function Footer() {
         <p>Адрес: ул. Цар Борис 3</p>
         <p>
          Copyright © {year} 
-          <img className="footer-logo" src={footerLogo} alt="" />
+          <img className="footer-logo" src={footerLogo} alt="logo" />
         </p>
       </div>
     </div>

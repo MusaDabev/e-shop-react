@@ -32,7 +32,7 @@ function ImageSlider({slides}) {
 
             <div className={index === current ? 'slide active' : 'slide'} key={index}>
 
-                {index === current && (<img src={slide.image} alt="shopping image" className="image" />)}
+                {index === current && (<img src={slide.image} alt="shopping" className="image" />)}
                 
             </div>
               

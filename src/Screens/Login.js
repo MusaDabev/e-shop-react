@@ -15,7 +15,7 @@ import './login.css'
 
       <input type="password" name="password" placeholder="Парола" />
 
-      <Button type="submit" variant="contained" style={{width: '150px', textAlign: 'center', backgroundColor: '#252525'}}>Вход</Button> 
+      <Button type="submit" variant="contained" style={{width: '150px', textAlign: 'center', backgroundColor: '#124FF2'}}>Вход</Button> 
     </form>
     </>
   )

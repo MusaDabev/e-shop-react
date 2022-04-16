@@ -1,9 +1,14 @@
 .headingAndMessage {
     display: flex;
     align-items: center;
+    
 }
 
 .message-icon {
     font-size: 3rem;
     cursor: pointer;
+}
+
+.most-selled-heading {
+    font-size: 2rem;
 }

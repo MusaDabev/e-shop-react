@@ -1,7 +1,6 @@
 .cart-container {
     margin-left: 140px;
     margin-right: 140px;
- 
 }
 
 .cart-item-container {
@@ -11,10 +10,22 @@
     background-color: #F1F1F1;
     width: 100%;
     justify-content: center;
-   
 }
 
 .subtotal-andButtons {
     width: 100%;
     text-align: center;
 }
+
+@media only screen and (max-width: 576px) { 
+
+    .cart-container {
+      margin: 0;
+    }
+
+    .cart-item-container {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+ }
