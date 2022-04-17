@@ -1,0 +1,86 @@
+.product-details-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.item-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.item-discription {
+    margin: 0px;
+}
+
+.share-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.share-product > p {
+    margin: 0px;
+}
+
+.compare-and-fav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.compare, .fav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-price {
+font-size: 2rem;
+color: #7B21F1;
+}
+
+.add-to-cart {
+    background-color: #2721F1;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 5px;
+    gap: 5px;
+
+}
+
+.phone-order {
+    border: 3px solid #2721F1 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.more-images {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
