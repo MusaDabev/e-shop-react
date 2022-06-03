@@ -2,7 +2,7 @@ import React from 'react'
 import {Typography, Divider, Button} from '@mui/material'
 import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-import Review from './Review';
+import Review from '../Review';
 import './paymentForm.css'
 
 function PaymentForm({checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout}) {

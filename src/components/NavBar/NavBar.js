@@ -2,7 +2,7 @@ import React, {useContext,} from "react";
 import { Link } from "react-router-dom";
 import "./navBar.css";
 import * as AiIcons  from "react-icons/ai"
-import { Context } from "./Context";
+import { Context } from "../Context";
 
 
  function NavBar() {

@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, } from 'react'
 import './searchBar.css'
 import {FaSearch} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Context } from '../Context'
+import { Context } from '../../Context'
 
 function SearchBar({products, placeholder}) {
 

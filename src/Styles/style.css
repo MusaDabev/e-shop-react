@@ -803,7 +803,7 @@ body {
     .most-selled-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         width: auto;
         margin-left: 50px;
         margin-right: 50px;
@@ -817,7 +817,7 @@ body {
     .most-selled-container {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         justify-content: center;
         width: auto;
         margin-left: 50px;

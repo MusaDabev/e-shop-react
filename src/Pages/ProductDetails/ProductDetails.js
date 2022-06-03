@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { commerce } from "../lib/commerce";
+import { commerce } from "../../lib/commerce";
 import { useParams } from "react-router-dom";
 import { BsFillShareFill, BsTelephoneFill } from "react-icons/bs"
 import { MdCompareArrows, MdFavoriteBorder } from "react-icons/md"

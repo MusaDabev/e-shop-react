@@ -1,8 +1,8 @@
 import React from "react";
-import Categories from "../components/Categories";
-import ImageSlider from "../components/ImageSlider";
-import Product from "../components/Products";
-import { SliderData } from "../components/SliderData";
+import Categories from "../../components/Categories/Categories";
+import ImageSlider from "../../components/ImageSlider/ImageSlider";
+import Product from "../../components/Products/Products";
+import { SliderData } from "../../components/ImageSlider/SliderData";
 import "./home.css";
 
 function Home({products, onAddToCart}) {

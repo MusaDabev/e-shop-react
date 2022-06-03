@@ -1,7 +1,6 @@
 import React from "react";
 import "../../Styles/style.css";
 import logo from "../../pictures/Drop.png";
-import searchLogo from "../../pictures/search-solid.svg";
 import { Link, useLocation } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
