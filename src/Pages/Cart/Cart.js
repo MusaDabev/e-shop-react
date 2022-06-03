@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import CartItem from "../components/CartItem";
+import CartItem from "../../components/CartItem/CartItem.js";
 import './cart.css'
 
 function Cart({ cart, handleCartQty, handleRemoveFromCart, handleEmptyCart }) {

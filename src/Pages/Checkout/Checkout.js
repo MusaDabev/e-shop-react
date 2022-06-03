@@ -1,8 +1,8 @@
 import React, { useState, useEffect, } from 'react'
 import {Paper, Typography, Stepper, Step, StepLabel, CircularProgress,Divider, Button } from '@mui/material';
 import './checkout.css'
-import AddressForm from '../components/AddressForm';
-import PaymentForm from '../components/PaymentForm';
+import AddressForm from '../../components/AddressForm/AddressForm';
+import PaymentForm from '../../components/PaymentForm/PaymentForm';
 import {Link,  } from 'react-router-dom'
 
 

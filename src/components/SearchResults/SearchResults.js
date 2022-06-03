@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Context } from '../Context'
-import './singleProduct.css'
-import SingleProduct from './SingleProduct';
+import '../SingleProduct/singleProduct.css'
+import SingleProduct from '../SingleProduct/SingleProduct';
 
 function SearchResults({ onAddToCart}) {
 

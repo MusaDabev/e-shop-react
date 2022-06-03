@@ -4,18 +4,18 @@ import { useState, useEffect } from "react";
 import React from "react";
 
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer";
-import Subscribe from "./components/Subscribe";
-import Contacts from "./components/Contacts";
-import NotFound from "./Pages/NotFound";
-import Login from "./Pages/Login";
-import Register from "./Pages/Register";
-import Home from "./Pages/Home";
-import ProductDetails from "./Pages/ProductDetails";
+import Footer from "./components/Footer/Footer";
+import Subscribe from "./components/Subscribe/Subscribe";
+import Contacts from "./Pages/Contacts/Contacts";
+import NotFound from "./Pages/NotFound/NotFound";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
+import Home from "./Pages/Home/Home";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import { commerce } from "./lib/commerce";
-import Cart from "./Pages/Cart";
-import Checkout from "./Pages/Checkout";
-import SearchResults from "./components/SearchResults";
+import Cart from "./Pages/Cart/Cart";
+import Checkout from "./Pages/Checkout/Checkout";
+import SearchResults from "./components/SearchResults/SearchResults";
 import { Context } from "./components/Context";
 
 function App() {

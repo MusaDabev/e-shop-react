@@ -1,8 +1,8 @@
 import React from "react";
 import { BiMessageRoundedDots } from "react-icons/bi";
 
-import "../Styles/style.css";
-import "./product.css"
+import "../../Styles/style.css";
+import "../product.css"
 import SingleProduct from "../SingleProduct/SingleProduct";
 
 

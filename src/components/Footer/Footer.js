@@ -1,6 +1,5 @@
 import React from 'react';
-import '../Styles/style.css';
-import footerLogo from '../pictures/Drop_White.png';
+import footerLogo from '../../pictures/Drop_White.png';
 import { Link } from 'react-router-dom';
 import {BsFacebook, BsInstagram, BsTwitter} from 'react-icons/bs';
 import './footer.css';

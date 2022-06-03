@@ -1,6 +1,5 @@
 import React from 'react';
-import '../Styles/style.css';
-import subsLogo from '../pictures/Drop_White.png';
+import subsLogo from '../../pictures/Drop_White.png';
 import {AiOutlineMail} from 'react-icons/ai'
 
 function Subscribe() {

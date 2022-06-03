@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import {Link} from 'react-router-dom'
 import { useForm, FormProvider } from "react-hook-form";
-import FormInput from "../FormInput";
+import FormInput from "../FormInput/FormInput";
 import {commerce} from '../../lib/commerce.js'
 import './adressForm.css'
 
