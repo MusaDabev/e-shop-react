@@ -1,0 +1,241 @@
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #5752EE;
+    margin-top: 140px;
+}
+
+.footerHeadings {
+    color: white;
+    font-size: 2rem;
+}
+
+.inforamtion {
+    margin-left: 140px;
+}
+
+.inforamtion>ul>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.inforamtion>ul>li {
+    padding: 5px;
+    margin-left: -40px;
+
+}
+
+.sidebar-items {
+    list-style-type: none;
+}
+
+
+
+.contacts {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.menu-footer {
+    list-style-type: none;
+}
+
+.menu-footer>li>a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.menu-footer>li {
+    padding: 8px;
+    margin-left: -40px;
+}
+
+.footer-logo {
+    width: 80px;
+    height: 36px;
+}
+
+@media only screen and (max-width: 576px) {
+
+    .footer {
+        grid-template-columns: 1fr;
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+
+    .footer>.inforamtion,
+    .footer>.menu,
+    .footer>.social-networks,
+    .footer>.contacts {
+        margin-left: 50px;
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: 577px) {
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #5752EE;
+        margin-top: 140px;
+    }
+
+    .footer>.inforamtion {
+        margin-left: 0px;
+    }
+
+    .footer>.inforamtion,
+    .footer>.menu,
+    .footer>.social-networks,
+    .footer>.contacts {
+        justify-items: space-around;
+        margin-left: 10px;
+        font-size: 32px;
+        width: auto;
+    }
+
+}
+
+@media only screen and (min-width: 992px) { 
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: #5752EE;
+        margin-top: 140px;
+    }
+    
+    .inforamtion {
+        color: white;
+        font: normal normal 300 32px/38px Roboto;
+        margin-left: 140px;
+    }
+    
+    .inforamtion>ul>li>a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .inforamtion>ul>li {
+        padding: 5px;
+        margin-left: -40px;
+    
+    }
+    
+    .sidebar-items {
+        list-style-type: none;
+    }
+    
+    .menu {
+        color: white;
+        font: normal normal 300 32px/38px Roboto;
+    }
+    
+    .social-networks {
+        color: white;
+        font: normal normal 300 32px/38px Roboto;
+    }
+    
+    .contacts {
+        color: white;
+        font: normal normal 300 32px/38px Roboto;
+    }
+    
+    .menu-footer {
+        list-style-type: none;
+    }
+    
+    .menu-footer>li>a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .menu-footer>li {
+        padding: 8px;
+        margin-left: -40px;
+    }
+    
+    .social-networks>i {
+        padding: 8px;
+    }
+    
+    .footer-logo {
+        width: 80px;
+        height: 36px;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) { 
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: #5752EE;
+        margin-top: 140px;
+    }
+    
+    .inforamtion {
+        color: white;
+        margin-left: 140px;
+        font-size: 1rem;
+    }
+    
+    .inforamtion>ul>li>a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .inforamtion>ul>li {
+        padding: 5px;
+        margin-left: -40px;
+    }
+    
+    
+    .menu {
+        color: white;
+        font-size: 1rem;
+    }
+    
+    .social-networks {
+        color: white;
+        font-size: 1rem;
+    }
+    
+    .contacts {
+        color: white;
+        font: normal normal 300 32px/38px Roboto;
+    }
+    
+    .menu-footer {
+        list-style-type: none;
+    }
+    
+    .menu-footer>li>a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .menu-footer>li {
+        padding: 8px;
+        margin-left: -40px;
+    }
+    
+    .social-networks>i {
+        padding: 8px;
+    }
+    
+    .footer-logo {
+        width: 80px;
+        height: 36px;
+    }
+}
+
