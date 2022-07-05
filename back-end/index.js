@@ -6,6 +6,7 @@ const cors = require("cors");
 
 const userRoute = require("./routes/user");
 const productRoute = require("./routes/product");
+const authRoute = require("./routes/auth");
 
 dotenv.config();
 
@@ -20,6 +21,8 @@ mongoose
 
   app.use(cors());
   app.use(express.json());
+  
+  app.use("/api/auth", authRoute);
   app.use("/api/users", userRoute);
   app.use("/api/products", productRoute);
 
