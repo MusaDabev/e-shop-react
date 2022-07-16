@@ -1,75 +1,105 @@
 import React, { useEffect, useState } from "react";
-import { commerce } from "../../lib/commerce";
 import { useParams } from "react-router-dom";
 import { BsFillShareFill, BsTelephoneFill } from "react-icons/bs"
 import { MdCompareArrows, MdFavoriteBorder } from "react-icons/md"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+//import { publicRequest } from "../../requestMethods";
+
+import { addProduct } from "../../redux/cartRedux";
+import { addProductToFav } from "../../redux/favouriteRedux";
+import { useDispatch } from "react-redux";
 
 
 import "./productDetails.css";
+import axios from "axios";
 
-function ProductDetails({handleAddToCart}) {
+function ProductDetails() {
 
- 
-
-  const [product, setProduct] = useState(false);
   const [phone, setPhone] = useState("Поръчай по телефона")
 
+  window.scrollTo(0, 0);
+  
   const { id } = useParams();
+
+  const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
+  const [color, setColor] = useState("");
+  const [size, setSize] = useState("");
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/api/products/find/" + id);
+        setProduct(res.data);
+      } catch {}
+    };
+    getProduct();
+  }, [id]);
+
+  const handleQuantity = (type) => {
+    if (type === "dec") {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const handleAddToCart = () => {
+    dispatch(
+      addProduct({ ...product, quantity, color, size  })
+    );
+  };
+
+ const handleAddToFvourites = () => {
+  dispatch(
+    addProductToFav({ ...product, quantity, color, size })
+  );
+ }
+
 
   const showPhone = () => {
     setPhone("+359 000 555 666")
   }
 
-  const fetchProduct = async (id) => {
-    const response = await commerce.products.retrieve(id);
 
-    console.log(response);
-    setProduct(response);
-  };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  },[])
-
-  useEffect(() => {
-    fetchProduct(id);
-  }, []);
   return (
     <>
       {product && (
         <div className="product-details-container">
           <div className="images-container">
             <img
-              src={product.image.url}
-              alt={product.name}
+              src={product.img}
+              alt={product.title}
               style={{ height: "350px", width: "400px" }}
             />
             <div className="more-images">
             <img
-              src={product.image.url}
-              alt={product.name}
+              src={product.img}
+              alt={product.title}
               style={{ height: "100px", width: "100px" }}
             />
             <img
-              src={product.image.url}
-              alt={product.name}
+              src={product.img}
+              alt={product.title}
               style={{ height: "100px", width: "100px" }}
             />
             <img
-              src={product.image.url}
-              alt={product.name}
+              src={product.img}
+              alt={product.title}
               style={{ height: "100px", width: "100px" }}
             />
             </div>
           </div>
 
           <div className="details-container">
-            <p className="item-title">{product.name}</p>
+            <p className="item-title">{product.title}</p>
             <p
-              dangerouslySetInnerHTML={{ __html: product.description }}
+            
               className="item-discription"
-            ></p>
+            >
+               {product.desc }
+            </p>
             <div className="share-product">
                 <BsFillShareFill style={{color: "#7B21F1"}} />
                 <p>Сподели с приятел</p>
@@ -85,9 +115,9 @@ function ProductDetails({handleAddToCart}) {
               </div>
             </div>
               <strong className="item-price">
-                {product.price.formatted}
+                {product.price}
               </strong>
-              <button className="add-to-cart" onClick={() => handleAddToCart(product.id, 1)}> <ShoppingCartIcon />  Добави в количка</button>
+              <button className="add-to-cart" onClick={handleAddToCart}> <ShoppingCartIcon />  Добави в количка</button>
               
               <button className="phone-order" onClick={showPhone}> <BsTelephoneFill /> {phone}</button>
           </div>

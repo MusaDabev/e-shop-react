@@ -7,7 +7,7 @@ import SingleProduct from "../SingleProduct/SingleProduct";
 
 
 
-function Products({products, onAddToCart}) {
+function Products({products}) {
   
 
   return (
@@ -19,7 +19,7 @@ function Products({products, onAddToCart}) {
       <div className="most-selled-container">
         {products.map((product) => {
 
-          return <SingleProduct key={product.id} product={product} onAddToCart={onAddToCart} />;
+          return <SingleProduct key={product._id} product={product} />;
 
         })}
       </div>
