@@ -3,24 +3,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CartItem from "../../components/CartItem/CartItem.js";
 import './cart.css'
+import {useDispatch, useSelector} from 'react-redux';
 
-function Cart({ cart, handleCartQty, handleRemoveFromCart, handleEmptyCart }) {
+function Cart() {
+
+  const cart = useSelector((state) => state.cart);
+  console.log(cart)
+  const dispatch = useDispatch();
   
 
   const FilledCart = () => (
       <> 
     <div className="cart-item-container">
-      { cart.line_items.map((item) => (
+      { cart.products.map((item) => (
         
-        <div key={item.id}>
-         <CartItem item={item} handleCartQty={handleCartQty} handleRemoveFromCart={handleRemoveFromCart}  />
+        <div key={item._id}>
+         <CartItem item={item}   />
         </div>
         
       ))}
       </div>
       <div className="subtotal-andButtons">
-      <p>Общо: {cart.subtotal.formatted_with_symbol} </p>
-      <Button onClick={handleEmptyCart}>Изпразни количката</Button>
+      <p>Общо:  </p>
+      <Button>Изпразни количката</Button>
       <Button LinkComponent={Link} to="/checkout">Напред към плащане</Button>
       </div>
       
@@ -36,14 +41,14 @@ function Cart({ cart, handleCartQty, handleRemoveFromCart, handleEmptyCart }) {
     )
   }
 
-  if (!cart.line_items) {
+  if (!cart.products) {
       return <p>Зареждане...</p>
   }
 
   return (
   <div className="cart-container">
   <h1>Вашата количка</h1>
-  {cart.line_items.length ? <FilledCart /> : <EmptyCart/>  }
+  {cart.products.length ? <FilledCart /> : <EmptyCart/>  }
   </div>);
 }
 
