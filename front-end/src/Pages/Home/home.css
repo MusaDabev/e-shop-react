@@ -1,21 +1,32 @@
 .first-section {
    display: grid;
-   grid-template-columns: 0.6fr 1.4fr; 
+   grid-template-columns: 0.6fr 1.4fr;
    margin-left: 50px;
    margin-right: 50px;
    background-color: white;
    margin-top: 10px;
+
 }
 
-@media only screen and (max-width: 576px) { 
+
+
+@media only screen and (max-width: 925px) {
    .first-section {
       grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
       margin: 10px 0 0 0;
-      align-items: center;
-      justify-items: center;
-      justify-content: center;
+      place-items: center;
    }
 }
+
+@media only screen and (max-width: 600px) {
+   .first-section {
+
+      grid-template-rows: 1fr;
+
+   }
+}
+
 
 .main-section {
    display: grid;
@@ -91,37 +102,37 @@
 
 /* Extra small devices (phones, 576px and down) */
 @media only screen and (max-width: 576px) {
-  
+
    .main-section {
-       display: grid;
-       grid-template-columns: 1fr;
-       margin-left: 0px;
-       justify-items: center;
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-left: 0px;
+      justify-items: center;
    }
 
 
    .most-selled-heading {
-       margin-left: 0px;
-       width: 100%;
-       text-align: center;
-       font: normal normal bold 40px/48px Roboto;
-       letter-spacing: 0.8px;
-       color: #252525;
+      margin-left: 0px;
+      width: 100%;
+      text-align: center;
+      font: normal normal bold 40px/48px Roboto;
+      letter-spacing: 0.8px;
+      color: #252525;
    }
 
    .most-selled-container {
-       display: grid;
-       width: 100%;
-       grid-template-columns: 1fr;
-       margin-left: 0px;
-       justify-items: center;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr;
+      margin-left: 0px;
+      justify-items: center;
    }
 
 
    .inforamtion {
-       margin-left: 0px;
-       font-size: 20px;
-       justify-content: center;
+      margin-left: 0px;
+      font-size: 20px;
+      justify-content: center;
    }
 }
 
@@ -130,66 +141,66 @@
 
 
    .main-section {
-       grid-template-columns: 1fr;
-       margin: 0px;
+      grid-template-columns: 1fr;
+      margin: 0px;
    }
 
 
    .most-selled-container {
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       margin-left: 0px;
-       width: auto;
-       justify-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: 0px;
+      width: auto;
+      justify-items: center;
    }
 }
 
 @media only screen and (min-width: 992px) {
 
 
-.main-section {
-   display: grid;
-   grid-template-columns: .5fr 1fr;
-   margin-left: 140px;
-}
+   .main-section {
+      display: grid;
+      grid-template-columns: .5fr 1fr;
+      margin-left: 140px;
+   }
 
-.most-selled-heading {
-  margin-left: 0px;
-  width: auto;
-   color: #252525;
-  text-align: center;
-}
+   .most-selled-heading {
+      margin-left: 0px;
+      width: auto;
+      color: #252525;
+      text-align: center;
+   }
 
-.most-selled-container {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   margin-left: 0px;
-   justify-items: center;
-}
+   .most-selled-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-left: 0px;
+      justify-items: center;
+   }
 
-.most-selled-item>img,
-.most-selled-item>a>img {
-   width: 260px;
-   height: 252px;
-}
+   .most-selled-item>img,
+   .most-selled-item>a>img {
+      width: 260px;
+      height: 252px;
+   }
 
-.most-selled-item>.product-name {
-   width: 185px;
-   height: 29px;
-   text-align: left;
-   font: normal normal bold 24px/29px Roboto;
-   letter-spacing: 0.48px;
-   color: #252525;
-}
+   .most-selled-item>.product-name {
+      width: 185px;
+      height: 29px;
+      text-align: left;
+      font: normal normal bold 24px/29px Roboto;
+      letter-spacing: 0.48px;
+      color: #252525;
+   }
 
-.most-selled-item>.product-discription {
-   width: 227px;
-   height: 19px;
-   text-align: left;
-   font: normal normal 300 16px/19px Roboto;
-   letter-spacing: 0.32px;
-   color: #252525;
-}
+   .most-selled-item>.product-discription {
+      width: 227px;
+      height: 19px;
+      text-align: left;
+      font: normal normal 300 16px/19px Roboto;
+      letter-spacing: 0.32px;
+      color: #252525;
+   }
 
 }
 
@@ -197,58 +208,58 @@
 @media only screen and (min-width: 1200px) {
 
    .most-selled-heading {
-       margin-left: 140px;
-       width: 350px;
-       height: 48px;
-       text-align: left;
-       color: #252525;
+      margin-left: 140px;
+      width: 350px;
+      height: 48px;
+      text-align: left;
+      color: #252525;
    }
-   
+
    .most-selled-container {
-       display: grid;
-       grid-template-columns: repeat(6, 17%);
-       grid-template-rows: 1fr 1fr 1fr;
-       width: auto;
-       margin-left: 140px;
+      display: grid;
+      grid-template-columns: repeat(6, 17%);
+      grid-template-rows: 1fr 1fr 1fr;
+      width: auto;
+      margin-left: 140px;
    }
-   
+
    .most-selled-item>img,
    .most-selled-item>a>img {
-       width: 100%;
-       height: 252px;
+      width: 100%;
+      height: 252px;
    }
-   
+
    .most-selled-item>.product-name {
-       width: 185px;
-       height: 29px;
-       text-align: left;
-       letter-spacing: 0.48px;
-       color: #252525;
+      width: 185px;
+      height: 29px;
+      text-align: left;
+      letter-spacing: 0.48px;
+      color: #252525;
    }
-   
+
    .most-selled-item>.product-discription {
-       width: 227px;
-       height: 19px;
-       text-align: left;
-       font: normal normal 300 16px/19px Roboto;
-       letter-spacing: 0.32px;
-       color: #252525;
+      width: 227px;
+      height: 19px;
+      text-align: left;
+      font: normal normal 300 16px/19px Roboto;
+      letter-spacing: 0.32px;
+      color: #252525;
    }
-    
-   
+
+
 }
 
 @media screen and (min-width: 1201px) {
 
 
    .most-selled-container {
-       display: grid;
-       grid-template-columns: repeat(4, 1fr);
-       grid-template-rows: 1fr 1fr;
-       width: auto;
-       margin-left: 50px;
-       margin-right: 50px;
-       justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+      width: auto;
+      margin-left: 50px;
+      margin-right: 50px;
+      justify-content: center;
    }
 
 }
@@ -256,12 +267,12 @@
 @media screen and (min-width: 1500px) {
 
    .most-selled-container {
-       display: grid;
-       grid-template-columns: repeat(6, 1fr);
-       justify-content: center;
-       grid-gap: 10px;
-       margin-left: 50px;
-       margin-right: 50px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      justify-content: center;
+      grid-gap: 10px;
+      margin-left: 50px;
+      margin-right: 50px;
    }
 
 }
