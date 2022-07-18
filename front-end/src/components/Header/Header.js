@@ -25,10 +25,6 @@ function Header({ totalItems, products }) {
         </Link>
       )}
 
-      <Link to="/dashboard">
-          <button>Dashboard</button>
-        </Link>
-
       <Link to="/registration" className="registration-link">
         Регистрация
       </Link>

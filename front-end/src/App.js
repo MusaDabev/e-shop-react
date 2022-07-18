@@ -17,7 +17,6 @@ import Cart from "./Pages/Cart/Cart";
 import Checkout from "./Pages/Checkout/Checkout";
 import SearchResults from "./components/SearchResults/SearchResults";
 import { Context } from "./components/Context";
-import Dashboard from "./Pages/Dashboard/Dashboard";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -145,7 +144,6 @@ function App() {
               path="/search-results"
               element={<SearchResults onAddToCart={handleAddToCart} />}
             />
-            <Route path="/dashboard" element={<Dashboard />}></Route>
             <Route path="*" element={<NotFound />}></Route>
         
         </Routes>
