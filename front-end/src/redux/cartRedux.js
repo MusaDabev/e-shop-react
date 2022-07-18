@@ -9,29 +9,12 @@ const cartSlice = createSlice({
   },
   reducers: {
     addProduct: (state, action) => {
-      const isInArr =  state.products.find(product => {
-        if ( product._id !== action.payload._id) {
-           return false
-        } else {
-         product.quantity += 1
-         return true
-        } })
-       
-       if(!isInArr) {
-         state.products.push(action.payload);
-       } 
-          
-       state.total += action.payload.price * action.payload.quantity; 
-       },
-       removeProduct: (state, action) => {
-         
-         
-         state.products = state.products.filter(
-           (product) => product._id !== action.payload.id
-         );
+      state.quantity += 1;
+      state.products.push(action.payload);
+      state.total += action.payload.price * action.payload.quantity;
     },
   },
 });
 
-export const { addProduct, removeProduct } = cartSlice.actions;
+export const { addProduct } = cartSlice.actions;
 export default cartSlice.reducer;

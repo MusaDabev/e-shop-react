@@ -16,35 +16,72 @@ import Cart from "./Pages/Cart/Cart";
 import Checkout from "./Pages/Checkout/Checkout";
 import SearchResults from "./components/SearchResults/SearchResults";
 import { Context } from "./components/Context";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 function App() {
-  const [sidebar, setSidebar] = useState(false);
+ 
+  const [sidebar, setSidebar] = useState(false)
+
+
 
   const [filteredData, setFilteredData] = useState([]);
 
+ 
+
+
   return (
     <div className="App">
-      <Context.Provider
-        value={{ filteredData, setFilteredData, sidebar, setSidebar }}
-      >
-        <Header />
-
-        <div className="content">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
+       <Context.Provider value={{ filteredData, setFilteredData, sidebar, setSidebar }}>
+      <Header  />
+      
+      <div className="content">
+     
+        <Routes>
+          
+            <Route
+              exact
+              path="/"
+              element={
+                <Home />
+              }
+            />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/cart" element={<Cart />} exact />
+            <Route
+              path="/cart"
+              element={
+                <Cart
+                
+                />
+              }
+              exact
+            />
             <Route path="/registration" element={<Register />} />
-            <Route path="/products/:id" element={<ProductDetails />} />
-            <Route exact path="/checkout" element={<Checkout />} />
-            <Route path="/search-results" element={<SearchResults />} />
-
+            <Route
+              path="/products/:id"
+              element={<ProductDetails />}
+            />
+            <Route
+              exact
+              path="/checkout"
+              element={
+                <Checkout
+                
+                />
+              }
+            />
+            <Route
+              path="/search-results"
+              element={<SearchResults />}
+            />
+            <Route path="/dashboard" element={<Dashboard />}></Route>
             <Route path="*" element={<NotFound />}></Route>
-          </Routes>
-        </div>
-        <Subscribe />
-        <Footer />
+        
+        </Routes>
+      
+      </div>
+      <Subscribe />
+      <Footer />
       </Context.Provider>
     </div>
   );
