@@ -5,9 +5,12 @@ import { BsFillShareFill, BsTelephoneFill } from "react-icons/bs"
 import { MdCompareArrows, MdFavoriteBorder } from "react-icons/md"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 <<<<<<< HEAD
+<<<<<<< HEAD
 //import { publicRequest } from "../../requestMethods";
 
 import { useDispatch } from "react-redux";
+=======
+>>>>>>> parent of 8c71e1b (remove commerce.js and add back-end)
 =======
 >>>>>>> parent of 8c71e1b (remove commerce.js and add back-end)
 
