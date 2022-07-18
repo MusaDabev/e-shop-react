@@ -2,11 +2,6 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const cors = require("cors");
-
-const userRoute = require("./routes/user");
-const productRoute = require("./routes/product");
-
 dotenv.config();
 
 // Connect to database
@@ -18,12 +13,9 @@ mongoose
     console.log(err);
   });
 
-  app.use(cors());
-  app.use(express.json());
-  app.use("/api/users", userRoute);
-  app.use("/api/products", productRoute);
-
   
+
+
   // Run server
 
   app.listen(process.env.PORT || 5000, () => {
