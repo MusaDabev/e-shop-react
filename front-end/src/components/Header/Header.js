@@ -6,11 +6,9 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchBar from "./SearchBar/SearchBar";
 import NavBar from "../NavBar/NavBar";
 import './header.css'
-import { useSelector } from 'react-redux';
 
 function Header({ totalItems, products }) {
   const location = useLocation();
-  const user = useSelector((state) => state.user.currentUser);
 
   return (
     <header className="header">
