@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const express = require("express");
 const app = express();
@@ -33,3 +34,5 @@ mongoose
   });
   
 >>>>>>> parent of 19e6470 (add redux to the project)
+=======
+>>>>>>> parent of e8f7d43 (connecting to DB and run server)

@@ -8,6 +8,7 @@
   },
   "author": "Musa Dabev",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "license": "ISC"
 =======
   "license": "ISC",
@@ -20,4 +21,7 @@
     "nodemon": "^2.0.18"
   }
 >>>>>>> parent of 19e6470 (add redux to the project)
+=======
+  "license": "ISC"
+>>>>>>> parent of e8f7d43 (connecting to DB and run server)
 }
