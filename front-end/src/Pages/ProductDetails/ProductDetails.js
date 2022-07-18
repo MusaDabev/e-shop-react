@@ -5,8 +5,6 @@ import { MdCompareArrows, MdFavoriteBorder } from "react-icons/md"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 //import { publicRequest } from "../../requestMethods";
 
-import { addProduct } from "../../redux/cartRedux";
-import { addProductToFav } from "../../redux/favouriteRedux";
 import { useDispatch } from "react-redux";
 
 
